@@ -27,7 +27,7 @@ def get_url(url):
         html = urlopen(urls)
         soup = BeautifulSoup(html, 'lxml')
         for i in soup.find('div', {'class': 'read-content j_readContent'}).children:
-            with open('D:\\b\\a\\read.txt', 'a+', encoding='GB18030') as f:  # 由于网页是utf-8,但是必须要以gbk写入，所以必须为GB18030
+            with open('D:\\python\\test\\read.txt', 'a+', encoding='GB18030') as f:  # 由于网页是utf-8,但是必须要以gbk写入，所以必须为GB18030
                 f.writelines(i)
                 f.write('\n')
 url='https://www.xs8.cn/book/8957149604581603#Catalog'
